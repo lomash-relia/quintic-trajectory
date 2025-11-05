@@ -42,7 +42,7 @@ $$
 
 | Symbol | Meaning |
 | :------ | :------ |
-| **T** | 6 × 6 matrix of time terms (powers of *t₀* and *t_f*) |
+| **T** | 6 × 6 matrix of time terms (refer to the code)|
 | **C** | Coefficient vector [c₀, c₁, c₂, c₃, c₄, c₅]ᵀ |
 | **Q** | Boundary condition vector [q₀, q̇₀, q̈₀, q_f, q̇_f, q̈_f]ᵀ |
 

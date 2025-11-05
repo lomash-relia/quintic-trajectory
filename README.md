@@ -3,7 +3,7 @@ Python class for quintic polynomial trajectory generation and visualization.
 
 # Quintic Polynomial Trajectory Generator
 
-A lightweight Python implementation for generating **smooth, time-constrained quintic polynomial trajectories** — widely used in robotics, motion planning, and control applications.
+A lightweight Python implementation for generating **smooth, time-constrained quintic polynomial trajectories**, widely used in robotics, motion planning, and control applications.
 
 This repository demonstrates how to compute **position**, **velocity**, and **acceleration** profiles that satisfy specific boundary conditions (start and end position, velocity, and acceleration).
 
@@ -15,26 +15,26 @@ This repository demonstrates how to compute **position**, **velocity**, and **ac
 
 A **quintic polynomial** is a fifth-order polynomial of the form:
 
-[
+$$
 q(t) = c_0 + c_1 t + c_2 t^2 + c_3 t^3 + c_4 t^4 + c_5 t^5
-]
+$$
 
-It provides **continuous position, velocity, and acceleration** — ideal for smooth robotic motion.
+It ensures **continuous position, velocity, and acceleration**, making it ideal for smooth robotic motion.
 
 By enforcing six boundary conditions:
 
-[
+$$
 \begin{aligned}
 q(t_0) &= q_0, &\quad \dot{q}(t_0) &= \dot{q}_0, &\quad \ddot{q}(t_0) &= \ddot{q}_0, \
 q(t_f) &= q_f, &\quad \dot{q}(t_f) &= \dot{q}_f, &\quad \ddot{q}(t_f) &= \ddot{q}_f,
 \end{aligned}
-]
+$$
 
-we obtain a **system of six linear equations** that can be written compactly as:
+we obtain a system of six linear equations that can be written compactly as:
 
-[
+$$
 T , C = Q
-]
+$$
 
 ---
 
@@ -51,7 +51,7 @@ Solving ( C = T^{-1} Q ) yields the unique coefficients defining the quintic pol
 This structure ensures:
 
 * **C² continuity** (position, velocity, acceleration are continuous)
-* **minimum jerk motion** — smooth for actuators and mechanical systems
+* **minimum jerk motion**, smooth for actuators and mechanical systems
 * easy analytical derivatives for control or simulation
 
 ---
@@ -79,9 +79,9 @@ traj.plot()
 
 ## 📈 Output
 
-* **Position (q)** — smooth transition between start and end waypoints
-* **Velocity (dq)** — starts and ends at zero
-* **Acceleration (ddq)** — smooth bell-shaped profile
+* **Position (q)**, smooth transition between start and end waypoints
+* **Velocity (dq)**, starts and ends at zero
+* **Acceleration (ddq)**, smooth bell-shaped profile
 
 This ensures minimal jerk and feasible torque demand for actuators.
 
@@ -90,7 +90,7 @@ This ensures minimal jerk and feasible torque demand for actuators.
 ## 💡 Practical Insight
 
 In robotic systems, **torque is proportional to angular acceleration**.
-Hence, trajectory duration ( T = t_f - t_0 ) must be selected carefully —
+Hence, trajectory duration ( T = t_f - t_0 ) must be selected carefully,
 short durations cause large accelerations and torque spikes, which may exceed actuator limits.
 
 ---

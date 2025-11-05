@@ -38,15 +38,16 @@ $$
 
 ---
 
-## ⚙️ The \( T C = Q \) Formulation
+## ⚙️ The ( T C = Q ) Formulation
 
 | Symbol | Meaning |
 | :------ | :------ |
-| **T** | \(6 \times 6\) matrix of time terms (powers of \(t_0\) and \(t_f\)) |
-| **C** | Coefficient vector \( [c_0, c_1, c_2, c_3, c_4, c_5]^T \) |
-| **Q** | Boundary condition vector \( [q_0, \dot{q}_0, \ddot{q}_0, q_f, \dot{q}_f, \ddot{q}_f]^T \) |
+| **T** | 6 × 6 matrix of time terms (powers of *t₀* and *t_f*) |
+| **C** | Coefficient vector [c₀, c₁, c₂, c₃, c₄, c₅]ᵀ |
+| **Q** | Boundary condition vector [q₀, q̇₀, q̈₀, q_f, q̇_f, q̈_f]ᵀ |
 
-Solving \( C = T^{-1} Q \) yields the unique coefficients defining the quintic polynomial.
+Solving **C = T⁻¹Q** yields the unique coefficients defining the quintic polynomial.
+
 
 This structure ensures:
 
